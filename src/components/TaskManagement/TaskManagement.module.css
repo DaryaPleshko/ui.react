@@ -1,0 +1,49 @@
+.wrapper {
+    margin-left: 30px;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 40px;
+    color: #31C2E4;
+    margin: 10px 0 0 13px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+    margin: 55px 0 0 10px;
+}
+
+.greetings {
+    width: 181px;
+    height: 82px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(74, 74, 74, 0.45);
+    margin: 14px 0 0 10px;
+}
+
+.tasks {
+    background-image: url('./assets/greeting.svg');
+    width: 186px;
+    height: 181px;
+    margin-top: 46px;
+}
+
+.image {
+    background-image: url('./assets/icons.svg');
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 25px;
+}
+
+.num-tasks {
+    font-weight: 500;
+    font-size: 40px;
+    color: #FFFFFF;
+    margin: 50px 0 0 23px;
+}

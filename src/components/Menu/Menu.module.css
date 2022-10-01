@@ -1,0 +1,34 @@
+.wrapper {
+    height: 720px;
+    width: 45px;
+    border-right: 2px solid rgba(74, 74, 74, 0.45);
+
+}
+
+.wrapper div {
+    margin-top: 30px;
+}
+
+.main {
+    background-image: url('./assets/Vector.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 23px;
+}
+
+.menu {
+    background-image: url('./assets/radix.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.setting {
+    background-image: url('./assets/nastroiki.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}

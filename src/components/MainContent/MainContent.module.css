@@ -1,0 +1,51 @@
+.title {
+    width: 500px;
+    height: 150px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #24252C;
+    margin: 40px 0 0 10px;
+}
+
+.text {
+    width: 360px;
+    height: 84px;
+    font-weight: 400;
+    font-size: 17px;
+    color: #6E6A7C;
+    margin: 0 0 0 17px;
+}
+
+
+.buttons {
+    background: #31C2E4;
+    border-radius: 30px;
+    width: 370px;
+    height: 40px;
+    margin: 0 0 0 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.volna {
+    background-image: url('./assets/volna.svg');
+    width: 1440px;
+    height: 288px;
+    margin-top: 30px;
+}
+
+.picture {
+    background-image: url('./assets/picture.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 580px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    margin: 70px 220px 0 0;
+}

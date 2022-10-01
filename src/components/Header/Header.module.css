@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 40px;
+    color: #31C2E4;
+    margin: 10px 0 0 13px;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.nightmode {
+    background-image: url('./assets/switch-body.svg');
+    width: 85px;
+    height: 35px;
+    margin-top: 16px;
+    margin-bottom: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* .switch {
+    background-image: url('./assets/switch.svg');
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+.contact {
+    width: 102px;
+    height: 36px;
+    font-weight: 400;
+    font-size: 19px;
+    color: rgba(74, 74, 74, 0.72);
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 19px;
+    color: rgba(74, 74, 74, 0.72);
+    margin-top: 20px;
+}
+
+.flex p:not(:last-child){
+    padding-right: 65px;
+}
+
+.container {
+    display: flex;
+}
+
+.signup-button {
+    background: #31C2E4;
+    border-radius: 20px;
+    padding: 5px 35px;
+    margin-top: 14px;
+    margin-bottom: auto;
+    color: #FFFFFF;
+    font-size: 19px;
+    box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+}
+
+.login-button {
+    background: #FFFFFF;
+    border: 3px solid #31C2E4;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: auto;
+    color: #31C2E4;
+    font-size: 19px;
+    padding: 2px 35px;
+    box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+}

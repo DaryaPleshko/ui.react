@@ -1,0 +1,15 @@
+.btn-log {
+    width: 130px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(74, 74, 74, 0.54);
+    box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+    padding-top: 4px;
+    margin-top: 20px;
+}
+

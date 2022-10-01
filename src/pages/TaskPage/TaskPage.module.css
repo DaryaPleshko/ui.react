@@ -1,0 +1,19 @@
+.wrapper {
+    width: 1485px;
+    margin: auto;
+}
+
+.tasks {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .background {
+    background: linear-gradient(92.09deg, #FFFFFF 0%, #E8FBFF 50%, #D8F7FF 100%);
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+} */

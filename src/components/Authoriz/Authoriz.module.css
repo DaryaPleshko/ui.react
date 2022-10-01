@@ -1,0 +1,86 @@
+.logo {
+    font-weight: 600;
+    font-size: 40px;
+    color: #31C2E4;
+    margin: 10px 0 0 13px;
+}
+
+.footer {
+    display: flex;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 48px;
+    color: #000000;
+    margin: 28px 0 0 8px;
+}
+
+.list-input {
+    margin: 45px 0 0 10px;
+}
+
+.list-input li:not(:first-child) {
+    margin-top: 25px;
+}
+
+.list-input li input {
+    padding-left: 10px;
+    width: 480px;
+    height: 50px;
+    outline: none;
+    background: #FFFFFF;
+    border: 2px solid rgba(74, 74, 74, 0.2);
+    border-radius: 10px;
+    box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
+    font-size: 15px;
+}
+
+.list-input li input:focus {
+    border: 3px solid #31C2E4;
+}
+
+.create-account {
+    width: 480px;
+    height: 50px;
+    background: #31C2E4;
+    border-radius: 8px;
+    margin: 45px 0 0 10px;
+    box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
+    padding-left: 10px;
+}
+
+.text-create-account {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.registration {
+    display: flex;
+}
+
+.question-regis {
+    font-size: 16px;
+    color: rgba(74, 74, 74, 0.45);
+    margin: 15px 0 0 250px;
+}
+
+.click-regis {
+    font-size: 16px;
+    color: #31C2E4;
+    margin: 15px 0 0 8px;
+}
+
+.image {
+    background-image: url('../Register/assets/smm.svg');
+    width: 800px;
+    height: 650px;
+    position: absolute;
+    right: 80px;
+    top: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
