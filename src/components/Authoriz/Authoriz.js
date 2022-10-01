@@ -6,7 +6,7 @@ import { auth } from '../../context/auth';
 
 const Authoriz = () => {
 
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState(''); 
     const [password, setPassword] = useState('');
     const [user, setUser] = useState('');
 
