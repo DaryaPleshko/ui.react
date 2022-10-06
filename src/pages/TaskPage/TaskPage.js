@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ToDo from '../../components/ToDo/ToDo';
 import TaskManagement from '../../components/TaskManagement/TaskManagement';
 import Tasks from '../../components/Tasks/Tasks';
@@ -7,6 +7,12 @@ import LogOut from '../../components/LogOut/LogOut';
 import style from './TaskPage.module.css';
 
 const TaskPage = () => {
+    const { state } = useLocation();
+    console.log(state.data);
+
+    const addedTasks = async () => {
+
+    }
 
     return (
 
@@ -15,13 +21,14 @@ const TaskPage = () => {
 
             <div className={style['tasks']}>
                 <Menu />
-                <TaskManagement />
+                <TaskManagement name={state.data[0].name} />
                 <ToDo />
-                <Tasks />
-                <LogOut />
+                <div className={style['background']}>
+                    <div className={style['picture']}><Tasks /></div>
+                </div>
             </div>
 
-            {/* <div className={style['background']}></div> */}
+
 
 
             <div>

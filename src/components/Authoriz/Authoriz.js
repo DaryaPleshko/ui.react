@@ -1,31 +1,30 @@
 import { useState } from 'react';
 import style from './Authoriz.module.css';
 import { http } from '../../hooks/http.hooks';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../../context/auth';
 
 const Authoriz = () => {
 
-    const [email, setEmail] = useState(''); 
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useState('');
+
+    const navigate = useNavigate();
 
     const sendRequest = async () => {
         try {
             const data = await http('http://localhost:5000/users/auth', 'POST', { email, password })
+
             if (data.length) {
                 auth.isAuth = true;
-                setUser(data)
+                navigate(`/task`, { state: { data: data } });
             }
         } catch (err) {
             console.log(err.message);
         }
     }
 
-    if (user) {
-        console.log('+');
-        Navigate('/task')
-    }
 
     return (
         <div className={style['register-content']}>

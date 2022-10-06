@@ -23,9 +23,11 @@ const Tasks = () => {
             <p className={style['title']}>Tasks:</p>
 
             <div className={style['tasks']} onChange={(event) => setTasks(event.target.value)} >
-                <p className={style['first-task']}>1.Empty task</p>
-                <p className={style['second-task']}>2.Empty task</p>
-                <p className={style['third-task']}>3.Empty task</p>
+                <p>1.Empty task</p>
+                <p>2.Empty task</p>
+                <p>3.Empty task</p>
+                <p>4.Empty task</p>
+                <p>5.Empty task</p>
             </div>
 
         </div >

@@ -7,6 +7,7 @@ const RegisterPage = () => {
     return (
         <div className={style['register-page']}>
             <Register />
+            
             <Link to={'/'}>Main</Link>
             <Link to={'/register'}>Register</Link>
             <Link to={'/login'}>Login</Link>

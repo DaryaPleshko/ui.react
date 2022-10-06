@@ -4,16 +4,24 @@
 }
 
 .tasks {
-    width: 1200px;
+    width: 980px;
     display: flex;
     justify-content: space-between;
 }
 
-/* .background {
+.background {
     background: linear-gradient(92.09deg, #FFFFFF 0%, #E8FBFF 50%, #D8F7FF 100%);
-    width: 500px;
+    width: 450px;
     height: 700px;
     position: absolute;
     right: -1px;
     top: -1px;
-} */
+}
+
+.picture {
+    background-image: url('./assets/picturess.svg');
+    width: 600px;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

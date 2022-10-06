@@ -1,45 +1,35 @@
 import style from './ToDo.module.css';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { http } from '../../hooks/http.hooks';
 
 const ToDo = () => {
-    const [data, setData] = useState({
-        create: {
-            user_id: '',
-            tasks: ''
-        },
-        update: {
-            user_id: '',
-            tasks: '',
-            id: ''
-        },
-        delete: {
-            user_id: '',
-            id: ''
-        },
-    });
-    const createRef = useRef('')
-    const deleteRef = useRef('')
-
-    const updateRefID = useRef('')
-    const updateRefT = useRef('')
+    const [dataCreate, setDataCreate] = useState({ task: '' })
+    const [dataUpdate, setDataUpdate] = useState({ id: '', task: '' })
+    const [dataDelete, setDataDelete] = useState({ id: '' })
 
     const sendCRUD = async () => {
         try {
-            const data = await http('http://localhost:5000/users/auth', 'POST', {})
-            console.log(data);
+            if (dataCreate.task) {
+                const data = await http('http://localhost:5000/tasks/user_id', 'POST', { ...dataCreate })
+                console.log(data);
+                // if (data.length){
+                // }
+            } else if (dataUpdate.task && dataUpdate.id) {
+                const data = await http('http://localhost:5000/tasks/user_id', 'PUT', { ...dataUpdate })
+                console.log(data);
+                // if (data.length) {
+
+                // }
+            } else if (dataDelete.id) {
+                const data = await http('http://localhost:5000/tasks/user_id', 'DELETE', { ...dataDelete })
+                console.log(data);
+                // if (data.length) {
+
+                // }
+            }
         } catch (err) {
             console.log(err.message);
         }
-    }
-
-    const generateData = (e) => {
-        if (e.target.name === 'create') setData({ ...data, create: { ...data.create, tasks: e.target.value } })
-        else if (e.target.name === 'update') {
-            if (e.target.name === 'id_update') setData({ ...data, update: { ...data.update, id: e.target.value } })
-            else setData({ ...data, update: { ...data.update, tasks: e.target.value } })
-        }
-        else setData({ ...data, delete: { ...data.delete, id: e.target.value } })
     }
 
     return (
@@ -51,7 +41,7 @@ const ToDo = () => {
                 <div className={style['block-flex-column']}>
                     <p>Create:</p>
                     <div>
-                        <input name='create' ref={createRef} placeholder='task' onChange={generateData} />
+                        <input name='create' placeholder='task' onChange={(event) => setDataCreate({ task: event.target.value })} />
                     </div>
                 </div>
 
@@ -59,10 +49,10 @@ const ToDo = () => {
                     <p>Update:</p>
                     <div className={style['flex']}>
                         <div>
-                            <input name='id_update' ref={updateRefID} placeholder='Number' onChange={generateData} />
+                            <input name='id_update' placeholder='Number' onChange={(event) => setDataUpdate({ ...dataUpdate, id: event.target.value })} />
                         </div>
                         <div>
-                            <input name='update' ref={updateRefT} placeholder='task' onChange={generateData} />
+                            <input name='update' placeholder='task' onChange={(event) => setDataUpdate({ ...dataUpdate, task: event.target.value })} />
                         </div>
                     </div>
                 </div>
@@ -70,11 +60,11 @@ const ToDo = () => {
                 <div className={style['block-flex-column']}>
                     <p>Delete:</p>
                     <div>
-                        <input name='delete' ref={deleteRef} placeholder='Number' onChange={generateData} />
+                        <input name='delete' placeholder='Number' onChange={(event) => setDataDelete({ task: event.target.value })} />
                     </div>
                 </div>
 
-                <div className={style['btn']}>+ save</div>
+                <div className={style['btn']} onClick={sendCRUD}>+ save</div>
 
             </div>
         </div>

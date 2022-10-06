@@ -1,13 +1,13 @@
 .wrapper {
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .title {
     margin-top: 125px;
     font-size: 24px;
     color: #000000;
-    font-weight: 500;
-}
+    font-weight: 500;    
+}   
 
 .tasks {
     font-size: 16px;
