@@ -22,20 +22,11 @@ const TaskPage = () => {
                 <Menu />
                 <TaskManagement name={state.data[0].name} />
                 <ToDo />
+
                 <div className={style['background']}>
+                    <Link to={'/'}><div className={style['btn-log']}>Log Out</div></Link>
                     <div className={style['picture']}><Tasks /></div>
                 </div>
-            </div>
-
-
-
-
-            <div>
-                <Link to={'/'}>Main</Link>
-                <Link to={'/register'}>Register</Link>
-                <Link to={'/login'}>Login</Link>
-                <Link to={'/task'}>Task</Link>
-                <Link to={'/profile'}>Profile</Link>
             </div>
         </div>
     );

@@ -40,7 +40,7 @@ const Register = () => {
         <div className={style['register-content']}>
             <div className={style['authorization']}>
                 <p className={style['question-auth']}>Already have an account?</p>
-                <Link to={'/login'}><p className={style['click-auth']}>Sign In</p></Link>
+                <Link to={'/login'}><p className={style['click-auth']}>Sign Up</p></Link>
             </div>
             <div className={style['footer']}>
                 <p className={style['first-footer']}>Welcome to </p>
