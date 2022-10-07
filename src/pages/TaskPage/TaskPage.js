@@ -3,7 +3,6 @@ import ToDo from '../../components/ToDo/ToDo';
 import TaskManagement from '../../components/TaskManagement/TaskManagement';
 import Tasks from '../../components/Tasks/Tasks';
 import Menu from '../../components/Menu/Menu';
-import LogOut from '../../components/LogOut/LogOut';
 import style from './TaskPage.module.css';
 
 const TaskPage = () => {

@@ -28,7 +28,7 @@ const ToDo = () => {
                 // }
             }
         } catch (err) {
-            console.log(err.message);
+            alert(err.message);
         }
     }
 

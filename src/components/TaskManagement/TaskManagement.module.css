@@ -25,24 +25,41 @@
     margin: 14px 0 0 10px;
 }
 
-.tasks {
-    background-image: url('./assets/greeting.svg');
+
+.taskCounter-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 186px;
     height: 181px;
+    background: linear-gradient(39.54deg, #31C2E4 0%, #99DAEA 97.99%);
+    box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
     margin-top: 46px;
 }
 
-.image {
-    background-image: url('./assets/icons.svg');
+.taskCounter-date-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 125px;
+    width: 186px;
+    padding-left: 30px;
+}
+
+.img {
     width: 40px;
     height: 40px;
     background-size: contain;
+    background-image: url('./assets/icons.svg');
     background-repeat: no-repeat;
 }
 
-.num-tasks {
+.tm-count {
+    width: 38px;
+    height: 60px;
     font-weight: 500;
     font-size: 40px;
+    line-height: 60px;
     color: #FFFFFF;
-    margin: 50px 0 0 23px;
 }
