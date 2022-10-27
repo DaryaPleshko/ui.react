@@ -9,9 +9,6 @@ const TaskPage = () => {
     const { state } = useLocation();
     console.log(state.data);
 
-    const addedTasks = async () => {
-
-    }
 
     return (
 

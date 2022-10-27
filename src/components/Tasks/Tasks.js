@@ -1,36 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import style from './Tasks.module.css';
 import { http } from '../../hooks/http.hooks';
+import TaskItem from './TaskItem';
+import { user } from '../../context/user';
 
 const Tasks = () => {
-
-    const [tasks, setTasks] = useState('');
-
+    const [tasks, setTasks] = useState([]);
 
     const GET = async () => {
         try {
-            const data = await http('http://localhost:5000/users/auth', 'GET', {tasks})
+            console.log(user.user_id);
+            const data = await http(`http://localhost:5000/tasks/${user.user_id}`, 'GET');
+            setTasks(data);
             console.log(data);
         } catch (err) {
             console.log(err.message);
         }
     }
 
+    useEffect(() => {
+        GET()
+    })
 
     return (
-        <div className={style['wrapper']}>
-
+        <>
+            <div className={style['wrapper']}></div>
             <p className={style['title']}>Tasks:</p>
-
-            <div className={style['tasks']} onChange={(event) => setTasks(event.target.value)} >
-                <p>1.Empty task</p>
-                <p>2.Empty task</p>
-                <p>3.Empty task</p>
-                <p>4.Empty task</p>
-                <p>5.Empty task</p>
-            </div>
-
-        </div >
+            {tasks.length > 0 ? tasks.map((el, index) => <TaskItem key={index} index={index} objtask={el} />) : null}
+        </>
     );
 }
 

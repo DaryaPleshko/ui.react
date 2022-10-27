@@ -13,7 +13,7 @@ const Register = () => {
     const navigate = useNavigate();
 
     const isValid = (name, email, pwd, conpwd) => {
-        if (name.length === 0 || email.length == 0 || pwd.length == 0 || confPwd.length == 0) throw new Error('Вы не ввели всю информацию !');
+        if (name.length === 0 || email.length === 0 || pwd.length === 0 || confPwd.length === 0) throw new Error('Вы не ввели всю информацию !');
         if (!/^[а-яА-Яa-zA-Z ]+$/g.test(name)) throw new Error('Некорректно введено ФИО !');
         if (!/^[a-z0-9_.]+@[a-z0-9_.]+\.[a-z]+$/g.test(email)) throw new Error('Некорректно введенный email !');
         if (pwd.length <= 7) throw new Error('Пароль должен содержать минимум 8 символов !');
@@ -24,7 +24,9 @@ const Register = () => {
     const sendRequest = async () => {
         try {
             isValid(name, email, password, confPwd);
+            console.log("+");
             const data = await http('http://localhost:5000/users/register', 'POST', { name, email, password });
+            console.log(data);
             if (data.length) {
                 auth.isAuth = true;
                 navigate(`/task`, { state: { data: data } });
@@ -53,9 +55,7 @@ const Register = () => {
                 <li> <input type="password" className={style["password"]} placeholder="Password" onChange={(event) => setPassword(event.target.value)} /></li>
                 <li> <input type="password" className={style["confirm-password"]} placeholder="Confirm Password" onChange={(event) => setConfPwd(event.target.value)} /></li>
             </ul>
-            <div className={style["create-account"]} onClick={sendRequest}>
-                <p className={style["text-create-account"]}>Create an account</p>
-            </div>
+            <div className={style["create-account"]} onClick={sendRequest}>Create an account</div>
             <div className={style['image']}></div>
         </div>
     );

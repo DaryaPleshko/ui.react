@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Register from "../../components/Register/Register";
 import style from './RegisterPage.module.css';
 

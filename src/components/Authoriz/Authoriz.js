@@ -4,6 +4,7 @@ import { http } from '../../hooks/http.hooks';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../context/auth';
+import { user } from '../../context/user';
 
 const Authoriz = () => {
 
@@ -12,16 +13,25 @@ const Authoriz = () => {
 
     const navigate = useNavigate();
 
+    const isValide = (email, pwd) => {
+        if (email.length === 0 || pwd.length === 0) throw new Error('Вы не ввели всю информацию !');
+        if (!/^[a-z0-9_.]+@[a-z0-9_.]+\.[a-z]+$/g.test(email)) throw new Error('Некорректно введенный email !');
+        return true;
+    }
+
     const sendRequest = async () => {
         try {
-            const data = await http('http://localhost:5000/users/auth', 'POST', { email, password })
 
+            isValide(email, password);
+            const data = await http('http://localhost:5000/users/auth', 'POST', { email, password })
             if (data.length) {
+                console.log('+');
                 auth.isAuth = true;
+                user.user_id = data[0].id;
                 navigate(`/task`, { state: { data: data } });
             }
         } catch (err) {
-            console.log(err.message);
+            alert(err.message);
         }
     }
 
@@ -36,9 +46,7 @@ const Authoriz = () => {
                 <li> <input className={style["email"]} placeholder="Email" onChange={(event) => setEmail(event.target.value)} /></li>
                 <li> <input type="password" className={style["password"]} placeholder="Password" onChange={(event) => setPassword(event.target.value)} /></li>
             </ul>
-            <div className={style["create-account"]} onClick={sendRequest}>
-                <p className={style["text-create-account"]}>Continue</p>
-            </div>
+            <div className={style["create-account"]} onClick={sendRequest}>Continue</div>
             <div className={style['registration']}>
                 <p className={style['question-regis']}>Not a member?</p>
                 <Link to={'/register'}><p className={style['click-regis']}>Create an account</p></Link>

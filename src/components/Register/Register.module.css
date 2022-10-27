@@ -65,21 +65,18 @@
 }
 
 .create-account {
-    width: 480px;
-    height: 50px;
+    width: 495px;
+    height: 40px;
     background: #31C2E4;
     border-radius: 8px;
     margin: 45px 0 0 10px;
     box-shadow: 3px 9px 9px rgba(0, 0, 0, 0.25);
-    padding-left: 10px;
-}
 
-.text-create-account {
     font-weight: 600;
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.852);
     text-align: center;
-    padding-top: 10px;
+    padding-top: 12px;
 }
 
 .image {

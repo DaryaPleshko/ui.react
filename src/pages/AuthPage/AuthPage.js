@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Authoriz from "../../components/Authoriz/Authoriz";
 import style from './AuthPage.module.css';
 

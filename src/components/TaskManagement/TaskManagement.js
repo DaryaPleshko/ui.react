@@ -1,7 +1,7 @@
 import style from './TaskManagement.module.css';
 
 
-const TaskManagement = ({ name }) => {
+const TaskManagement = ({ name, index }) => {
 
     return (
         <div className={style['wrapper']}>
@@ -11,7 +11,7 @@ const TaskManagement = ({ name }) => {
             <div className={style['taskCounter-block']}>
                 <div className={style['taskCounter-date-count']}>
                     <div className={style['img']}></div>
-                    <div className={style['tm-count']}>5</div>
+                    <div className={style['tm-count']}>{index}</div>
                 </div>
             </div>
         </div >
